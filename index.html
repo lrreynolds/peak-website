@@ -22,24 +22,30 @@
             height: auto;
             display: block;
         }
-.hero .overlay {
-    justify-content: flex-start;
+    .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
 
     padding-left: 8%;
-    padding-top: 60px;   /* 👈 move up (try 40–80px range) */
+    transform: translateY(-10%);
     text-align: left;
 }
-.hero .overlay h1 {
+ .hero .overlay h1 {
     font-size: 3em;
-    margin: 0 0 8px 0;   /* tighter */
+    margin: 0 0 10px 0;
 }
 
 .hero .overlay p {
-    font-size: 1.2em;    /* slightly smaller */
-    line-height: 1.3;    /* tighter */
-    margin: 0;
-    max-width: 420px;    /* prevents long line stretch */
+    font-size: 1.3em;
+    max-width: 500px;
     opacity: 0.9;
 }
         .section {
